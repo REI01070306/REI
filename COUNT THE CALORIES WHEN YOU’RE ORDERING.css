@@ -1,0 +1,112 @@
+body{
+    background-color: #f7eede;
+    font-family: system-ui;
+    padding: 30px;
+}
+
+h1{
+    background-color: #0b5a2d;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    color: #f7eede;
+    font-size: 90px;
+    width: 60%;
+}
+h2{
+    color: #0b5a2d;
+    font-size: 40px;
+}
+h3{
+    color: #0b5a2d;
+    font-size: 25px;
+}
+h1, h2, h3, h4{
+    text-align: center;
+}
+.LINE{
+    display: inline-block;
+}
+.L-LINE{
+    height: 3px;
+    background-color: #0b5a2d;
+    width: 30%;
+    text-align: left;
+    margin: 5% 0;
+    margin-right: 3%;
+    display: inline-block;
+
+}
+img{
+    width: 5%;
+    padding: 0 10px;
+    margin-bottom: 40px;
+}
+.R-LINE{
+    height: 3px;
+    background-color: #0b5a2d;
+    width: 30%;
+    text-align:right;
+    margin: 5% 0;
+    margin-left: 3%;
+    display: inline-block;
+}
+h4{
+    background-color: #0b5a2d;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5%;
+    color: #f7eede;
+    font-size: 70px;
+    width: 30%;
+}
+.item p{
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bold;
+}
+.food{
+    text-align:left;
+    width:45%;
+    color: #0b5a2d;
+    margin-left: 10%;
+}
+.price{
+    text-align: right;
+    width: 10%;
+    color: #0b5a2d;
+    margin-left: 10%;
+}
+.kcal{
+    text-align: center;
+    width: 120px;
+    color: #f7eede;
+    background-color: #0b5a2d;
+    margin-right: auto;
+    margin-left: 2%;
+}
+.F-LINE{
+    height: 3px;
+    background-color: #0b5a2d;
+    /* margin: 5% 0; */
+}
+.detail1{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b5a2d;
+}
+.detail2{
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    color: #0b5a2d;
+}
+h5{
+    text-align: left;
+    width: 50%;
+}
+h6{
+    text-align: right;
+    width: 50%;
+}
