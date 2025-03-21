@@ -6,6 +6,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="COUNT THE CALORIES WHEN YOU’RE ORDERING.css">
   <title>COUNT THE CALORIES WHEN YOU’RE ORDERING.</title>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    function calculateTotal() {
+        let totalPrice = 0;
+        let totalKcal = 0;
+
+        document.querySelectorAll(".item").forEach(item => {
+            let price = parseFloat(item.querySelector(".price").textContent.replace("$", ""));
+            let kcal = parseInt(item.querySelector(".kcal").textContent.replace("kcal", ""));
+            let quantity = parseInt(item.querySelector("select").value);
+
+            totalPrice += price * quantity;
+            totalKcal += kcal * quantity;
+        });
+
+        document.getElementById("total-price").textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+        document.getElementById("total-kcal").textContent = `Total Calories: ${totalKcal} kcal`;
+    }
+
+    function resetSelection() {
+        document.querySelectorAll(".item select").forEach(select => {
+            select.value = "0"; // 重置為 0
+        });
+        document.getElementById("total-price").textContent = "Total Price: $0.00";
+        document.getElementById("total-kcal").textContent = "Total Calories: 0 kcal";
+    }
+
+    document.querySelectorAll(".item select").forEach(select => {
+        select.addEventListener("change", calculateTotal);
+    });
+
+    document.getElementById("reset-button").addEventListener("click", resetSelection);
+
+    // 初始化計算
+    calculateTotal();
+});
+
+  </script>
+
 </head>
 <body>
     <h1>BHEALTHY CUISINE</h1>
@@ -14,11 +54,11 @@
         <h3>OPEN DAILY  :  10AM - 9PM</h3>
         <div class="LINE">
             <hr class="L-LINE"> 
-            <img src="https://rei01070306.github.io/REI/ve.png" alt="ve-icon">
-            <img src="https://rei01070306.github.io/REI/ve.png" alt="ve-icon">
-            <img src="https://rei01070306.github.io/REI/ve.png" alt="ve-icon">
-            <img src="https://rei01070306.github.io/REI/ve.png" alt="ve-icon">
-            <img src="https://rei01070306.github.io/REI/ve.png" alt="ve-icon">
+            <img src="C:\Users\Leo\Desktop\COUNT THE CALORIES WHEN YOU’RE ORDERING\ve.png" alt="ve-icon">
+            <img src="C:\Users\Leo\Desktop\COUNT THE CALORIES WHEN YOU’RE ORDERING\ve.png" alt="ve-icon">
+            <img src="C:\Users\Leo\Desktop\COUNT THE CALORIES WHEN YOU’RE ORDERING\ve.png" alt="ve-icon">
+            <img src="C:\Users\Leo\Desktop\COUNT THE CALORIES WHEN YOU’RE ORDERING\ve.png" alt="ve-icon">
+            <img src="C:\Users\Leo\Desktop\COUNT THE CALORIES WHEN YOU’RE ORDERING\ve.png" alt="ve-icon">
             <hr class="R-LINE">
         </div>
         <section>
@@ -27,41 +67,89 @@
                 <p class="food">KOREAN FLAVOR CHICKEN</p>
                 <p class="price">$129</p>
                 <p class="kcal">528kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">GARLIC PEPPER CHICKEN</p>
                 <p class="price">$125</p>
                 <p class="kcal">447kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">TERIYAKI CHICKEN</p>
                 <p class="price">$125</p>
                 <p class="kcal">481kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">CHICKEN BREAST WITH SCALLIO</p>
                 <p class="price">$125</p>
                 <p class="kcal">478kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">BLACK PEPPER CHICKEN</p>
                 <p class="price">$115</p>
                 <p class="kcal">447kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">KCHICKEN BREAST BURGER</p>
                 <p class="price">$99</p>
                 <p class="kcal">499kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">NCHICKEN RICE</p>
                 <p class="price">$99</p>
                 <p class="kcal">483kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">NEW ORLEANS DRUMSTIC</p>
                 <p class="price">$99</p>
                 <p class="kcal">502kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
         </section>
         <section>
@@ -70,21 +158,45 @@
                 <p class="food">LEMONY MATSUSAKA PORK</p>
                 <p class="price">$155</p>
                 <p class="kcal">461kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">GRAPEFRUIT SESAME FLAVOR PROK</p>
                 <p class="price">$129</p>
                 <p class="kcal">577kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">THAI HOLY BASSIL PORK</p>
                 <p class="price">$125</p>
                 <p class="kcal">589kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">GARLIC PORK</p>
                 <p class="price">$99</p>
                 <p class="kcal">562kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
         </section>
         <section>
@@ -93,11 +205,23 @@
                 <p class="food">FRENCH BLADE STEAK WITH GARLIC</p>
                 <p class="price">$199</p>
                 <p class="kcal">498kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">GRAPEFRUIT SESAME FLAVOR BEEF</p>
                 <p class="price">$139</p>
                 <p class="kcal">800kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
         </section>
         <section>
@@ -106,16 +230,34 @@
                 <p class="food">CHICKEN STEAK DUET</p>
                 <p class="price">$199</p>
                 <p class="kcal">552kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">SHICHIMI SNAPPER DONBURI</p>
                 <p class="price">$149</p>
                 <p class="kcal">422kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">VEGETARIAN</p>
                 <p class="price">$85</p>
                 <p class="kcal">353kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
         </section>
         <section>
@@ -124,17 +266,40 @@
                 <p class="food">CRANBERRY VINEGAR SPARKLING</p>
                 <p class="price">$69</p>
                 <p class="kcal">70kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">SUGAR-FREE SOY MILK</p>
                 <p class="price">$30</p>
                 <p class="kcal">146kcal</p>
+                <select id="referrer"  name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
             <article class="item">
                 <p class="food">TEA</p>
                 <p class="price">$45</p>
                 <p class="kcal">0kcal</p>
+                <select id="referrer" name="referrer">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
             </article>
+            <div id="totals">
+                <h3 id="total-price">Total Price: $0.00</h3>
+                <h3 id="total-kcal">Total Calories: 0 kcal</h3>
+                <button id="reset-button">Reset</button>
+            </div>
         </section>
 
         <footer>
