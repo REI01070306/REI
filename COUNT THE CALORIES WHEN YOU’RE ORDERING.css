@@ -75,7 +75,7 @@ h4{
     text-align: right;
     width: 10%;
     color: #0b5a2d;
-    margin-left: 10%;
+    margin-left: 8%;
 }
 .kcal{
     text-align: center;
@@ -84,6 +84,14 @@ h4{
     background-color: #0b5a2d;
     margin-right: auto;
     margin-left: 2%;
+}
+#referrer{
+    background-color:#f7eede;
+    width: 3%;
+    font-size: 30px;
+    margin-left: 2%;
+    border: #f7eede;
+    color: #0b5a2d;
 }
 .F-LINE{
     height: 3px;
@@ -109,4 +117,12 @@ h5{
 h6{
     text-align: right;
     width: 50%;
+}
+#reset-button{
+    font-size: 30px;
+    margin-left :47%;
+    box-shadow: black;
+    color:#f7eede;
+    background-color: #0b5a2d;
+    margin-bottom: 50px;;
 }
